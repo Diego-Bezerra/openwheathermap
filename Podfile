@@ -6,6 +6,7 @@ target 'OpenWeatherMap' do
   use_frameworks!
 
   # Pods for OpenWeatherMap
+  pod 'GoogleMaps'
 
   target 'OpenWeatherMapTests' do
     inherit! :search_paths

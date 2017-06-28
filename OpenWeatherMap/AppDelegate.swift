@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        GMSServices.provideAPIKey("AIzaSyA3XGedY_lYZ-39EBa0fl_5N32sr3a7nzU")
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let mainVc = MapViewController()
+        let navigationController = UINavigationController(rootViewController: mainVc)
+        window?.makeKeyAndVisible()
+        window?.rootViewController = navigationController
+        
         return true
     }
 
@@ -50,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return urls[urls.count-1]
     }()
     
+    //MARK: - Core Data Stack
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
         let modelURL = Bundle.main.url(forResource: "OpenWeatherMap", withExtension: "momd")!
