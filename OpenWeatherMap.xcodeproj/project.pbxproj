@@ -13,8 +13,10 @@
 		A8268DC71F032F5B001CC571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8268DC61F032F5B001CC571 /* Assets.xcassets */; };
 		A8268DD51F032F5B001CC571 /* OpenWeatherMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8268DD41F032F5B001CC571 /* OpenWeatherMapTests.swift */; };
 		A8E682B01F0466200077EC77 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E682AE1F0466200077EC77 /* MapViewController.swift */; };
-		A8E682B11F0466200077EC77 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E682AF1F0466200077EC77 /* MapViewController.xib */; };
 		A8E682B31F04689E0077EC77 /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E682B21F04689E0077EC77 /* Launch.xib */; };
+		A8E682B61F046AA00077EC77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8E682B81F046AA00077EC77 /* Localizable.strings */; };
+		A8E682C21F046C3A0077EC77 /* OWLocationManagerCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E682C11F046C3A0077EC77 /* OWLocationManagerCentral.m */; };
+		A8E682C81F0492760077EC77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8E682CA1F0492760077EC77 /* InfoPlist.strings */; };
 		FD57460FCB814C084DFE741F /* Pods_OpenWeatherMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B4CFF8888585DB9168D4B7 /* Pods_OpenWeatherMapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +44,16 @@
 		A8268DD41F032F5B001CC571 /* OpenWeatherMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapTests.swift; sourceTree = "<group>"; };
 		A8268DD61F032F5B001CC571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8E682AE1F0466200077EC77 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewControllers/MapViewController.swift; sourceTree = "<group>"; };
-		A8E682AF1F0466200077EC77 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = ViewControllers/MapViewController.xib; sourceTree = "<group>"; };
 		A8E682B21F04689E0077EC77 /* Launch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Launch.xib; path = ../Launch.xib; sourceTree = "<group>"; };
+		A8E682B71F046AA00077EC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A8E682B91F046ACE0077EC77 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A8E682BF1F046C3A0077EC77 /* OpenWeatherMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenWeatherMap-Bridging-Header.h"; sourceTree = "<group>"; };
+		A8E682C01F046C3A0077EC77 /* OWLocationManagerCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWLocationManagerCentral.h; path = Common/OWLocationManagerCentral.h; sourceTree = "<group>"; };
+		A8E682C11F046C3A0077EC77 /* OWLocationManagerCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWLocationManagerCentral.m; path = Common/OWLocationManagerCentral.m; sourceTree = "<group>"; };
+		A8E682C51F0475F90077EC77 /* OWConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OWConstants.h; path = Common/OWConstants.h; sourceTree = "<group>"; };
+		A8E682C91F0492760077EC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A8E682CB1F04927A0077EC77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A8E682CC1F04927C0077EC77 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		AB4522A6F4B7719358F7A616 /* Pods-OpenWeatherMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherMapTests/Pods-OpenWeatherMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0B1B905CAF258DBD3C1ECF2 /* Pods-OpenWeatherMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherMapTests/Pods-OpenWeatherMapTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,12 +110,16 @@
 		A8268DBB1F032F5B001CC571 /* OpenWeatherMap */ = {
 			isa = PBXGroup;
 			children = (
+				A8E682BA1F046B650077EC77 /* Common */,
+				A8E682BF1F046C3A0077EC77 /* OpenWeatherMap-Bridging-Header.h */,
 				A8E682B21F04689E0077EC77 /* Launch.xib */,
 				A8268DBC1F032F5B001CC571 /* AppDelegate.swift */,
 				A8E682AD1F0465F50077EC77 /* ViewControllers */,
 				A8268DC61F032F5B001CC571 /* Assets.xcassets */,
 				A8268DCB1F032F5B001CC571 /* Info.plist */,
 				A8268DC31F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld */,
+				A8E682CA1F0492760077EC77 /* InfoPlist.strings */,
+				A8E682B81F046AA00077EC77 /* Localizable.strings */,
 			);
 			path = OpenWeatherMap;
 			sourceTree = "<group>";
@@ -123,9 +137,18 @@
 			isa = PBXGroup;
 			children = (
 				A8E682AE1F0466200077EC77 /* MapViewController.swift */,
-				A8E682AF1F0466200077EC77 /* MapViewController.xib */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A8E682BA1F046B650077EC77 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A8E682C01F046C3A0077EC77 /* OWLocationManagerCentral.h */,
+				A8E682C11F046C3A0077EC77 /* OWLocationManagerCentral.m */,
+				A8E682C51F0475F90077EC77 /* OWConstants.h */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		B6824D2328A662E74AD9E559 /* Pods */ = {
@@ -196,6 +219,7 @@
 					A8268DB81F032F5B001CC571 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = RZ263M6665;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					A8268DCF1F032F5B001CC571 = {
@@ -213,6 +237,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = A8268DB01F032F5B001CC571;
 			productRefGroup = A8268DBA1F032F5B001CC571 /* Products */;
@@ -231,8 +256,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8268DC71F032F5B001CC571 /* Assets.xcassets in Resources */,
+				A8E682C81F0492760077EC77 /* InfoPlist.strings in Resources */,
+				A8E682B61F046AA00077EC77 /* Localizable.strings in Resources */,
 				A8E682B31F04689E0077EC77 /* Launch.xib in Resources */,
-				A8E682B11F0466200077EC77 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E682C21F046C3A0077EC77 /* OWLocationManagerCentral.m in Sources */,
 				A8268DC51F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld in Sources */,
 				A8E682B01F0466200077EC77 /* MapViewController.swift in Sources */,
 				A8268DBD1F032F5B001CC571 /* AppDelegate.swift in Sources */,
@@ -367,11 +394,35 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		A8E682B81F046AA00077EC77 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8E682B71F046AA00077EC77 /* Base */,
+				A8E682B91F046ACE0077EC77 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A8E682CA1F0492760077EC77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8E682C91F0492760077EC77 /* Base */,
+				A8E682CB1F04927A0077EC77 /* en */,
+				A8E682CC1F04927C0077EC77 /* pt-BR */,
+			);
+			name = InfoPlist.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		A8268DD71F032F5B001CC571 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -422,6 +473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -466,12 +518,15 @@
 			baseConfigurationReference = 4884A9D5BAEDED485A7B887E /* Pods-OpenWeatherMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = RZ263M6665;
 				INFOPLIST_FILE = OpenWeatherMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.diego.bezerra.OpenWeatherMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherMap/OpenWeatherMap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -481,12 +536,14 @@
 			baseConfigurationReference = 8C0E85D4F7C90641F25B2147 /* Pods-OpenWeatherMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = RZ263M6665;
 				INFOPLIST_FILE = OpenWeatherMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.diego.bezerra.OpenWeatherMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherMap/OpenWeatherMap-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
