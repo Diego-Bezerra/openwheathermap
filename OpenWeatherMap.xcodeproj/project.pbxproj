@@ -12,11 +12,11 @@
 		A8268DC51F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8268DC31F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld */; };
 		A8268DC71F032F5B001CC571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8268DC61F032F5B001CC571 /* Assets.xcassets */; };
 		A8268DD51F032F5B001CC571 /* OpenWeatherMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8268DD41F032F5B001CC571 /* OpenWeatherMapTests.swift */; };
-		A8E682B01F0466200077EC77 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E682AE1F0466200077EC77 /* MapViewController.swift */; };
 		A8E682B31F04689E0077EC77 /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E682B21F04689E0077EC77 /* Launch.xib */; };
 		A8E682B61F046AA00077EC77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8E682B81F046AA00077EC77 /* Localizable.strings */; };
 		A8E682C21F046C3A0077EC77 /* OWLocationManagerCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E682C11F046C3A0077EC77 /* OWLocationManagerCentral.m */; };
 		A8E682C81F0492760077EC77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8E682CA1F0492760077EC77 /* InfoPlist.strings */; };
+		A8E682CF1F0525A50077EC77 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E682CE1F0525A50077EC77 /* MapViewController.swift */; };
 		FD57460FCB814C084DFE741F /* Pods_OpenWeatherMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B4CFF8888585DB9168D4B7 /* Pods_OpenWeatherMapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,6 @@
 		A8268DD01F032F5B001CC571 /* OpenWeatherMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8268DD41F032F5B001CC571 /* OpenWeatherMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapTests.swift; sourceTree = "<group>"; };
 		A8268DD61F032F5B001CC571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8E682AE1F0466200077EC77 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewControllers/MapViewController.swift; sourceTree = "<group>"; };
 		A8E682B21F04689E0077EC77 /* Launch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Launch.xib; path = ../Launch.xib; sourceTree = "<group>"; };
 		A8E682B71F046AA00077EC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A8E682B91F046ACE0077EC77 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		A8E682C91F0492760077EC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A8E682CB1F04927A0077EC77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A8E682CC1F04927C0077EC77 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A8E682CE1F0525A50077EC77 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AB4522A6F4B7719358F7A616 /* Pods-OpenWeatherMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherMapTests/Pods-OpenWeatherMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0B1B905CAF258DBD3C1ECF2 /* Pods-OpenWeatherMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherMapTests/Pods-OpenWeatherMapTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,10 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				A8E682BA1F046B650077EC77 /* Common */,
+				A8E682CD1F0525820077EC77 /* ViewControllers */,
 				A8E682BF1F046C3A0077EC77 /* OpenWeatherMap-Bridging-Header.h */,
 				A8E682B21F04689E0077EC77 /* Launch.xib */,
 				A8268DBC1F032F5B001CC571 /* AppDelegate.swift */,
-				A8E682AD1F0465F50077EC77 /* ViewControllers */,
 				A8268DC61F032F5B001CC571 /* Assets.xcassets */,
 				A8268DCB1F032F5B001CC571 /* Info.plist */,
 				A8268DC31F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld */,
@@ -133,14 +133,6 @@
 			path = OpenWeatherMapTests;
 			sourceTree = "<group>";
 		};
-		A8E682AD1F0465F50077EC77 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				A8E682AE1F0466200077EC77 /* MapViewController.swift */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
 		A8E682BA1F046B650077EC77 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +141,14 @@
 				A8E682C51F0475F90077EC77 /* OWConstants.h */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		A8E682CD1F0525820077EC77 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8E682CE1F0525A50077EC77 /* MapViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		B6824D2328A662E74AD9E559 /* Pods */ = {
@@ -371,8 +371,8 @@
 			files = (
 				A8E682C21F046C3A0077EC77 /* OWLocationManagerCentral.m in Sources */,
 				A8268DC51F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld in Sources */,
-				A8E682B01F0466200077EC77 /* MapViewController.swift in Sources */,
 				A8268DBD1F032F5B001CC571 /* AppDelegate.swift in Sources */,
+				A8E682CF1F0525A50077EC77 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
