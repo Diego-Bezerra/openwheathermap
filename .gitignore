@@ -1,1 +1,10 @@
+# Xcode
+xcuserdata/
+project.xcworkspace/
+DerivedData/
+
+# repositories
+.git
+
+# Cocoapods
 Pods/
