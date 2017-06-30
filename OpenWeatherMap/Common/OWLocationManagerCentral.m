@@ -11,7 +11,9 @@
 #import "OWConstants.h"
 
 @interface OWLocationManagerCentral() <CLLocationManagerDelegate>
-    @property(strong, nonatomic) CLLocationManager* locationManager;    
+    @property(strong, atomic) CLLocationManager* locationManager;
+    @property(strong, atomic) CLLocation* lastLocation;
+    @property(atomic) BOOL hasAlreadyStardeLocationUpdate;
 @end
 
 @implementation OWLocationManagerCentral
@@ -38,8 +40,11 @@
 }
     
 -(void) start {
-    [self.locationManager requestWhenInUseAuthorization];
-    [self.locationManager startUpdatingLocation];
+    if (!_hasAlreadyStardeLocationUpdate) {
+        _hasAlreadyStardeLocationUpdate = true;
+        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager startUpdatingLocation];
+    }
 }
     
 #pragma mark CLLocationManagerDelegate

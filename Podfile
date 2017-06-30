@@ -6,7 +6,10 @@ target 'OpenWeatherMap' do
   use_frameworks!
 
   # Pods for OpenWeatherMap
-  pod 'GoogleMaps'
+  pod 'GoogleMaps', '2.3.0'
+  pod 'AlamofireObjectMapper', '4.0.2'
+  pod 'Alamofire', '4.4.0'
+  pod 'ObjectMapper', '2.2.7'
 
   target 'OpenWeatherMapTests' do
     inherit! :search_paths

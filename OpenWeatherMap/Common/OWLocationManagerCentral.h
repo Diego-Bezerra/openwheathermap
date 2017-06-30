@@ -11,7 +11,7 @@
 
 @interface OWLocationManagerCentral : NSObject
 
-@property(strong, nonatomic) CLLocation* lastLocation;
+@property(readonly, strong, atomic) CLLocation* lastLocation;
     
 +(OWLocationManagerCentral*)sharedManager;
 -(void) start;
