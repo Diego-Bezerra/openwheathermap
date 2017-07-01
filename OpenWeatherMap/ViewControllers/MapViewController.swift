@@ -64,52 +64,31 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UIAlertViewDelega
         marker.infoWindowAnchor = CGPoint(x: 0.2, y: -0.1)
     }
     
-    func setupNavigationBar() {
-        let rightButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search,
-                                          target: self, action: #selector(searchCitiesByLocation))
-        rightButton.tintColor = UIColor.lightGray
-        self.navigationItem.rightBarButtonItem = rightButton
+    func openCityList() {
+        let cityListVC = CityListViewController()
+        self.navigationController?.pushViewController(cityListVC, animated: true)
     }
     
-    func addSearchButtonView() {
-        
-        let bounds = UIScreen.main.bounds
-        let padding = CGFloat(16)
-        let bottomPadding = CGFloat(8)
-        let btnHeight = CGFloat(40)
-        let btnWidth = bounds.size.width - (padding * 2)
-        let x = padding
-        let y = bounds.size.height - (btnHeight + bottomPadding)
-        
-        let searchButton = UIButton(frame: CGRect(x: x, y: y, width: btnWidth, height: btnHeight))
-        searchButton.setTitle("Search", for: UIControlState.normal)
-        searchButton.backgroundColor = UIColor.blue
-        self.view?.addSubview(searchButton)
-    }
-    
-    func searchCitiesByLocation() {
-        let transition:CATransition = CATransition()
-        transition.duration = 0.5
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        transition.type = kCATransitionPush
-        transition.subtype = kCATransitionFromBottom
-        self.navigationController!.view.layer.add(transition, forKey: kCATransitionFromBottom)
-        
-        
-        self.navigationController?.pushViewController(dstVC, animated: false)
+    func dontShowTutorialAnymore() {
+        OWUserPreferences.setShowTutorialKey(false)
     }
     
     func showTutorialAlert() {
         
-        let delaySeconds = 5.0
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + delaySeconds) {
-            if !self.hasFirstMapTap {
-                let alert = UIAlertController(title: NSLocalizedString("TUTORIAL", comment: ""), message: NSLocalizedString("TUTORIAL_MSG", comment: ""), preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertActionStyle.default, handler: nil))
-                alert.addAction(UIAlertAction(title: NSLocalizedString("DONT_SHOW_ANYMORE", comment: ""), style: UIAlertActionStyle.default, handler: nil))
-                
-                self.present(alert, animated: true, completion: nil)
+        if OWUserPreferences.getShowTutorialKey() {
+            let delaySeconds = 5.0
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + delaySeconds) {
+                if !self.hasFirstMapTap {
+                    let alert = UIAlertController(title: NSLocalizedString("TUTORIAL", comment: ""), message: NSLocalizedString("TUTORIAL_MSG", comment: ""), preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertActionStyle.default, handler: nil))
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("DONT_SHOW_ANYMORE", comment: ""), style: UIAlertActionStyle.default, handler:{ [weak self] (ac) in
+                        guard let sel = self else {return}
+                        sel.dontShowTutorialAnymore()
+                    }))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
         }
     }
@@ -141,7 +120,16 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UIAlertViewDelega
     }
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-        let btnSearch:UIView? = Bundle.main.loadNibNamed("MarkerInfoWindow", owner: self, options: nil)?[0] as? UIView        
+        let btnSearch = Bundle.main.loadNibNamed("MarkerInfoWindow", owner: self, options: nil)?[0] as? MarkerInfoWindow
+        
         return btnSearch
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        self.openCityList()
+    }
+    
+    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
+        mapView.selectedMarker = marker
     }
 }

@@ -5,4 +5,5 @@
 #import "OWLocationManagerCentral.h"
 #import "OWConstants.h"
 #import "WeatherService.h"
-#import <JSONModel/JSONModel.h>
+#import "CityListViewController.h"
+#import "OWUserPreferences.h"

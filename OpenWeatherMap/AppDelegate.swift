@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         GMSServices.provideAPIKey("AIzaSyA3XGedY_lYZ-39EBa0fl_5N32sr3a7nzU")
-        OWLocationManagerCentral.sharedManager().start()
+        OWLocationManagerCentral.sharedManager().start()        
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let mainVc = MapViewController()

@@ -15,4 +15,5 @@ class MarkerInfoWindow: UIView {
     override func willMove(toSuperview newSuperview: UIView?) {
         searchButton.setTitle(NSLocalizedString("SEARCH_NEARBY_CITIES", comment: ""), for: UIControlState.normal)
     }
+    
 }

@@ -39,7 +39,7 @@
     return self;
 }
     
--(void) start {
+-(void) start {    
     if (!_hasAlreadyStardeLocationUpdate) {
         _hasAlreadyStardeLocationUpdate = true;
         [self.locationManager requestWhenInUseAuthorization];

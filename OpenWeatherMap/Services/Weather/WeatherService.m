@@ -21,6 +21,9 @@
     NSString* const GET_DATA = @"data/2.5/find?lat=%f&lon=%f&cnt=15&APPID=%@";
     
     -(NSURL*) makeUrlWithString:(NSString*) url {
+        
+        //UserPre
+        
         return [[NSURL alloc] initWithString: [NSString stringWithFormat:@"%@%@", BASE_URL, url]];
     }
     
