@@ -6,3 +6,8 @@
   Copyright © 2017 Diego Bezerra Souza. All rights reserved.
 */
 "APP_NAME" = "Open Weather Map";
+"SEARCH_NEARBY_CITIES" = "Search Nearby Cities";
+"TUTORIAL" = "Tutorial";
+"TUTORIAL_MSG" = "Tap the map to create a point";
+"DONT_SHOW_ANYMORE" = "Don't show it anymore";
+"OK" = "Ok";
