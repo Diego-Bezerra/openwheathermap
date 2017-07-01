@@ -87,6 +87,7 @@ class MapViewController: UIViewController {
         if !hasUserLocation {
             hasUserLocation = true
             if let loc = OWLocationManagerCentral.sharedManager().lastLocation {
+                
                 let camera = GMSCameraUpdate.setCamera(
                     GMSCameraPosition.camera(withLatitude: loc.coordinate.latitude, longitude: loc.coordinate.longitude, zoom: 10.0))
                 mapView?.moveCamera(camera)
