@@ -26,7 +26,7 @@ DEPENDENCIES:
   - AFNetworking (= 3.1.0)
   - GoogleMaps (= 2.3.0)
   - JSONModel (= 1.7.0)
-  - MBProgressHUD
+  - MBProgressHUD (= 1.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -34,6 +34,6 @@ SPEC CHECKSUMS:
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
 
-PODFILE CHECKSUM: 94bac12314d27d7ad491db3474cde91783cbc55c
+PODFILE CHECKSUM: 2ad0a0d422d96a6cdc47ca053a4b2db1421c6c28
 
 COCOAPODS: 1.2.1
