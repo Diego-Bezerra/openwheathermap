@@ -1,13 +1,12 @@
 //
-//  OpenWeatherMap-Bridging-Header.h
-//  OpenWeatherMap
-//
-//  Created by Diego Bezerra Souza on 02/07/17.
-//  Copyright © 2017 Diego Bezerra Souza. All rights reserved.
+//  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 
-#ifndef OpenWeatherMap_Bridging_Header_h
-#define OpenWeatherMap_Bridging_Header_h
-
-
-#endif /* OpenWeatherMap_Bridging_Header_h */
+#import "OWLocationManagerCentral.h"
+#import "OWConstants.h"
+#import "WeatherService.h"
+#import "CityListViewController.h"
+#import "OWUserPreferences.h"
+#import "CityVO.h"
+#import "WeatherVO.h"
+#import "ReaderFactory.h"

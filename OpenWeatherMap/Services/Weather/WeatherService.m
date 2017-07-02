@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "WeatherResponse.h"
 #import "OWConstants.h"
+#import "ReaderFactory.h"
 
 @interface WeatherService()
     
@@ -36,7 +37,7 @@
                 callback(nil, error);
             } else {
                 NSError* jsonError;
-                WeatherResponse* wr = [[WeatherResponse alloc] initWithDictionary:responseObject error:&jsonError];
+                WeatherResponse* wr = (WeatherResponse*) [[ReaderFactory getReader:JSON_READER] readDataWithDictionary:responseObject model:WeatherResponse.class error:&jsonError];
                 if (jsonError) {
                     NSLog(@"Error: %@", jsonError);
                 }

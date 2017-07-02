@@ -11,6 +11,8 @@
 		A8268DBD1F032F5B001CC571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8268DBC1F032F5B001CC571 /* AppDelegate.swift */; };
 		A8268DC71F032F5B001CC571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8268DC61F032F5B001CC571 /* Assets.xcassets */; };
 		A8268DD51F032F5B001CC571 /* OpenWeatherMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8268DD41F032F5B001CC571 /* OpenWeatherMapTests.swift */; };
+		A853C1541F09A54D0024874E /* JsonReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A853C1531F09A54D0024874E /* JsonReader.m */; };
+		A853C1571F09B4040024874E /* ReaderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A853C1561F09B4040024874E /* ReaderFactory.m */; };
 		A8E682B31F04689E0077EC77 /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E682B21F04689E0077EC77 /* Launch.xib */; };
 		A8E682B61F046AA00077EC77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8E682B81F046AA00077EC77 /* Localizable.strings */; };
 		A8E682C21F046C3A0077EC77 /* OWLocationManagerCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E682C11F046C3A0077EC77 /* OWLocationManagerCentral.m */; };
@@ -58,6 +60,11 @@
 		A8268DD01F032F5B001CC571 /* OpenWeatherMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8268DD41F032F5B001CC571 /* OpenWeatherMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapTests.swift; sourceTree = "<group>"; };
 		A8268DD61F032F5B001CC571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A853C1501F09A4B50024874E /* ReaderProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReaderProtocol.h; path = Readers/ReaderProtocol.h; sourceTree = "<group>"; };
+		A853C1521F09A54D0024874E /* JsonReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonReader.h; path = Readers/JsonReader.h; sourceTree = "<group>"; };
+		A853C1531F09A54D0024874E /* JsonReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JsonReader.m; path = Readers/JsonReader.m; sourceTree = "<group>"; };
+		A853C1551F09B4040024874E /* ReaderFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReaderFactory.h; path = Readers/ReaderFactory.h; sourceTree = "<group>"; };
+		A853C1561F09B4040024874E /* ReaderFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReaderFactory.m; path = Readers/ReaderFactory.m; sourceTree = "<group>"; };
 		A8E682B21F04689E0077EC77 /* Launch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Launch.xib; path = ../Launch.xib; sourceTree = "<group>"; };
 		A8E682B71F046AA00077EC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A8E682B91F046ACE0077EC77 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -156,8 +163,9 @@
 		A8268DBB1F032F5B001CC571 /* OpenWeatherMap */ = {
 			isa = PBXGroup;
 			children = (
-				A8E682D21F06AB480077EC77 /* Services */,
 				A8E682BA1F046B650077EC77 /* Common */,
+				A853C14F1F09A4700024874E /* Readers */,
+				A8E682D21F06AB480077EC77 /* Services */,
 				A8E682CD1F0525820077EC77 /* ViewControllers */,
 				A8E682BF1F046C3A0077EC77 /* OpenWeatherMap-Bridging-Header.h */,
 				A8E682B21F04689E0077EC77 /* Launch.xib */,
@@ -180,17 +188,37 @@
 			path = OpenWeatherMapTests;
 			sourceTree = "<group>";
 		};
+		A853C14F1F09A4700024874E /* Readers */ = {
+			isa = PBXGroup;
+			children = (
+				A853C1501F09A4B50024874E /* ReaderProtocol.h */,
+				A853C1521F09A54D0024874E /* JsonReader.h */,
+				A853C1531F09A54D0024874E /* JsonReader.m */,
+				A853C1551F09B4040024874E /* ReaderFactory.h */,
+				A853C1561F09B4040024874E /* ReaderFactory.m */,
+			);
+			name = Readers;
+			sourceTree = "<group>";
+		};
+		A853C1581F09BC3C0024874E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A8E6839A1F0965C20077EC77 /* OWBaseSessionManagerProtocol.h */,
+				A8E6836E1F081D940077EC77 /* OWBaseSessionManager.h */,
+				A8E6836F1F081D940077EC77 /* OWBaseSessionManager.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		A8E682BA1F046B650077EC77 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A853C1581F09BC3C0024874E /* Network */,
 				A8E682C01F046C3A0077EC77 /* OWLocationManagerCentral.h */,
 				A8E682C11F046C3A0077EC77 /* OWLocationManagerCentral.m */,
 				A8E682C51F0475F90077EC77 /* OWConstants.h */,
 				A8E683661F080C9C0077EC77 /* OWUserPreferences.h */,
 				A8E683671F080C9C0077EC77 /* OWUserPreferences.m */,
-				A8E6836E1F081D940077EC77 /* OWBaseSessionManager.h */,
-				A8E6836F1F081D940077EC77 /* OWBaseSessionManager.m */,
-				A8E6839A1F0965C20077EC77 /* OWBaseSessionManagerProtocol.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -208,12 +236,12 @@
 		A8E682D21F06AB480077EC77 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A8E682D71F06B2D60077EC77 /* Wheater */,
+				A8E682D71F06B2D60077EC77 /* WheaterAPI */,
 			);
 			name = Services;
 			sourceTree = "<group>";
 		};
-		A8E682D71F06B2D60077EC77 /* Wheater */ = {
+		A8E682D71F06B2D60077EC77 /* WheaterAPI */ = {
 			isa = PBXGroup;
 			children = (
 				A8E682E41F06BB5F0077EC77 /* Data */,
@@ -223,7 +251,7 @@
 				A8E683961F09647B0077EC77 /* WeatherFacade.h */,
 				A8E683971F09647B0077EC77 /* WeatherFacade.m */,
 			);
-			name = Wheater;
+			name = WheaterAPI;
 			sourceTree = "<group>";
 		};
 		A8E682E41F06BB5F0077EC77 /* Data */ = {
@@ -505,10 +533,12 @@
 				A8E6831A1F07C5610077EC77 /* WeatherService.m in Sources */,
 				A8E683731F083C340077EC77 /* RainVO.m in Sources */,
 				A8E683681F080C9C0077EC77 /* OWUserPreferences.m in Sources */,
+				A853C1541F09A54D0024874E /* JsonReader.m in Sources */,
 				A8268DBD1F032F5B001CC571 /* AppDelegate.swift in Sources */,
 				A8E683141F06D5260077EC77 /* WeatherVO.m in Sources */,
 				A8E683111F06D50E0077EC77 /* WindVO.m in Sources */,
 				A8E683701F081D940077EC77 /* OWBaseSessionManager.m in Sources */,
+				A853C1571F09B4040024874E /* ReaderFactory.m in Sources */,
 				A8E683081F06D45D0077EC77 /* CityVO.m in Sources */,
 				A8E682D11F0528D90077EC77 /* MapViewController.swift in Sources */,
 				A8E6830E1F06D4F30077EC77 /* MainVO.m in Sources */,
