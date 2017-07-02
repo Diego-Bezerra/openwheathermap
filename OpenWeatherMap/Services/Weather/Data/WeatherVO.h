@@ -10,7 +10,7 @@
 #import <JSONModel/JSONModel.h>
 
 @interface WeatherVO : JSONModel
-    @property (nonatomic) NSInteger* id;
+    @property (nonatomic) NSInteger id;
     @property (nonatomic) NSString* main;
     @property (nonatomic) NSString* mDescription;
     @property (nonatomic) NSString* icon;

@@ -48,6 +48,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UIAlertViewDelega
         self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         self.mapView?.isMyLocationEnabled = true
         self.mapView?.delegate = self
+        self.mapView?.settings.myLocationButton = true
         view = mapView
     }
     
@@ -65,8 +66,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UIAlertViewDelega
     }
     
     func openCityList() {
-        let cityListVC = CityListViewController()
-        self.navigationController?.pushViewController(cityListVC, animated: true)
+        let cityListVC = CityListViewController(latitude: marker.position.latitude, andLongitude: marker.position.longitude)
+        self.navigationController?.pushViewController(cityListVC!, animated: true)
     }
     
     func dontShowTutorialAnymore() {
@@ -98,7 +99,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UIAlertViewDelega
         if !hasUserLocation {
             hasUserLocation = true
             if let loc = OWLocationManagerCentral.sharedManager().lastLocation {
-                
                 let camera = GMSCameraUpdate.setCamera(
                     GMSCameraPosition.camera(withLatitude: loc.coordinate.latitude, longitude: loc.coordinate.longitude, zoom: 10.0))
                 mapView?.moveCamera(camera)

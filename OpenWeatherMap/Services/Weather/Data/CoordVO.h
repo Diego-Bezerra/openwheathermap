@@ -10,6 +10,6 @@
 #import <JSONModel/JSONModel.h>
 
 @interface CoordVO : JSONModel
-    @property (nonatomic) double* lat;
-    @property (nonatomic) double* lon;    
+    @property (nonatomic) NSNumber<Optional>* lat;
+    @property (nonatomic) NSNumber<Optional>* lon;
 @end

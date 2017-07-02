@@ -20,34 +20,29 @@
     NSString* const BASE_URL = @"http://api.openweathermap.org/";
     NSString* const GET_DATA = @"data/2.5/find?lat=%f&lon=%f&cnt=15&APPID=%@";
     
-    -(NSURL*) makeUrlWithString:(NSString*) url {
-        
-        //UserPre
-        
-        return [[NSURL alloc] initWithString: [NSString stringWithFormat:@"%@%@", BASE_URL, url]];
+    -(NSString*) makeUrlWithString:(NSString*) url {
+        return [NSString stringWithFormat:@"%@%@", BASE_URL, url];
     }
     
     -(void) getWeatherDataWithLatitude:(double) lat longitude:(double) lon andCallback:(void (^)(WeatherResponse* weatherResponse, NSError* error)) callback {
         
-        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-        AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+        NSString* urlStr = [self makeUrlWithString:[NSString stringWithFormat:GET_DATA, lat, lon, WEATHER_API_KEY]];
         
-        NSString* urlStr = [NSString stringWithFormat:GET_DATA, lat, lon, WEATHER_API_KEY];
-        NSURL *URL = [self makeUrlWithString:urlStr];
-        NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-        
-        NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        [self getWithParameters:nil url:urlStr andCallback:^(NSURLSessionTask *task, id responseObject, NSError *error) {
+            
             if (error) {
                 NSLog(@"Error: %@", error);
                 callback(nil, error);
             } else {
                 NSError* jsonError;
                 WeatherResponse* wr = [[WeatherResponse alloc] initWithDictionary:responseObject error:&jsonError];
+                if (jsonError) {
+                    NSLog(@"Error: %@", jsonError);
+                }
                 callback(wr, jsonError);
             }
+            
         }];
-        [dataTask resume];
-        
     }
     
 @end

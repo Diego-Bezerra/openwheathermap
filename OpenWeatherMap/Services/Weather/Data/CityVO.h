@@ -12,18 +12,17 @@
 #import "WeatherVO.h"
 #import "WindVO.h"
 #import "MainVO.h"
+#import "RainVO.h"
 
-@protocol CityVO;
+@protocol WeatherVO;
 
 @interface CityVO : JSONModel
-    @property(nonatomic) NSInteger* id;
-    @property(nonatomic) NSString* name;
-    @property(nonatomic) CoordVO* coord;
-    @property(nonatomic) MainVO* main;
-    @property(nonatomic) WeatherVO* weather;
-    @property(nonatomic) WindVO* wind;
-    @property(nonatomic) NSInteger* dt;
-    @property(nonatomic) JSONModel<Optional>* sys;
-    @property(nonatomic) JSONModel<Optional>* rain;
-    @property(nonatomic) JSONModel<Optional>* snow;
+    @property(nonatomic) NSNumber<Optional>* id;
+    @property(nonatomic) NSString<Optional>* name;
+    @property(nonatomic) CoordVO<Optional>* coord;
+    @property(nonatomic) MainVO<Optional>* main;
+    @property(nonatomic) NSArray<Optional, WeatherVO>* weather;
+    @property(nonatomic) WindVO<Optional>* wind;
+    @property(nonatomic) RainVO<Optional>* rain;
+    @property(nonatomic) NSNumber<Optional>* dt;
 @end

@@ -5,9 +5,19 @@
   Created by Diego Bezerra Souza on 28/06/17.
   Copyright © 2017 Diego Bezerra Souza. All rights reserved.
 */
+
+//MapViewController
 "APP_NAME" = "Open Weather Map";
 "SEARCH_NEARBY_CITIES" = "Search Nearby Cities";
 "TUTORIAL" = "Tutorial";
 "TUTORIAL_MSG" = "Tap the map to create a point";
 "DONT_SHOW_ANYMORE" = "Don't show it anymore";
+
+//CityListViewController
+"CITY_LIST_TITLE" = "Choose City";
+"COULD_NOT_SHOW_CITIES" = "Couldn't show nearby cities :(";
+
+
 "OK" = "Ok";
+
+

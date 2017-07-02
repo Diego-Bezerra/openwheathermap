@@ -10,6 +10,6 @@
 #import <JSONModel/JSONModel.h>
 
 @interface WindVO : JSONModel
-    @property (nonatomic) double speed;
-    @property (nonatomic) int deg;
+    @property (nonatomic) NSNumber<Optional>* speed;
+    @property (nonatomic) NSNumber<Optional>* deg;
 @end

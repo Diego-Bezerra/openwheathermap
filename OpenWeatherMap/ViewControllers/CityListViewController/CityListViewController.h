@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CityListViewController : UIViewController
-
+    -(CityListViewController*) initWithLatitude:(double) latitude andLongitude:(double) longitude;
 @end

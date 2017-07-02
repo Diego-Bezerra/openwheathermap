@@ -24,18 +24,16 @@
 		A8E683111F06D50E0077EC77 /* WindVO.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E683101F06D50E0077EC77 /* WindVO.m */; };
 		A8E683141F06D5260077EC77 /* WeatherVO.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E683131F06D5260077EC77 /* WeatherVO.m */; };
 		A8E6831A1F07C5610077EC77 /* WeatherService.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E683191F07C5610077EC77 /* WeatherService.m */; };
-		A8E683201F07DC300077EC77 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6831F1F07DC300077EC77 /* WeatherService.swift */; };
-		A8E683271F07DC470077EC77 /* CityVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E683211F07DC470077EC77 /* CityVO.swift */; };
-		A8E683281F07DC470077EC77 /* CoordVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E683221F07DC470077EC77 /* CoordVO.swift */; };
-		A8E683291F07DC470077EC77 /* MainVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E683231F07DC470077EC77 /* MainVO.swift */; };
-		A8E6832A1F07DC470077EC77 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E683241F07DC470077EC77 /* WeatherResponse.swift */; };
-		A8E6832B1F07DC470077EC77 /* WeatherVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E683251F07DC470077EC77 /* WeatherVO.swift */; };
-		A8E6832C1F07DC470077EC77 /* WindVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E683261F07DC470077EC77 /* WindVO.swift */; };
 		A8E6835C1F07E8DB0077EC77 /* MarkerInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E6835B1F07E8DB0077EC77 /* MarkerInfoWindow.xib */; };
 		A8E6835E1F07E9D10077EC77 /* MarkerInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6835D1F07E9D00077EC77 /* MarkerInfoWindow.swift */; };
 		A8E683621F08013D0077EC77 /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E683601F08013D0077EC77 /* CityListViewController.m */; };
 		A8E683631F08013D0077EC77 /* CityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E683611F08013D0077EC77 /* CityListViewController.xib */; };
 		A8E683681F080C9C0077EC77 /* OWUserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E683671F080C9C0077EC77 /* OWUserPreferences.m */; };
+		A8E683701F081D940077EC77 /* OWBaseSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E6836F1F081D940077EC77 /* OWBaseSessionManager.m */; };
+		A8E683731F083C340077EC77 /* RainVO.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E683721F083C340077EC77 /* RainVO.m */; };
+		A8E683791F0843E10077EC77 /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E683771F0843E10077EC77 /* WeatherDetailsViewController.swift */; };
+		A8E6837A1F0843E10077EC77 /* WeatherDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E683781F0843E10077EC77 /* WeatherDetailsViewController.xib */; };
+		A8E6838D1F090EE80077EC77 /* OpenWeatherMapTestsObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E6838C1F090EE80077EC77 /* OpenWeatherMapTestsObjC.m */; };
 		FD57460FCB814C084DFE741F /* Pods_OpenWeatherMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B4CFF8888585DB9168D4B7 /* Pods_OpenWeatherMapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,13 +85,6 @@
 		A8E683131F06D5260077EC77 /* WeatherVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherVO.m; path = Services/Weather/Data/WeatherVO.m; sourceTree = "<group>"; };
 		A8E683181F07C5610077EC77 /* WeatherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherService.h; path = Services/Weather/WeatherService.h; sourceTree = "<group>"; };
 		A8E683191F07C5610077EC77 /* WeatherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherService.m; path = Services/Weather/WeatherService.m; sourceTree = "<group>"; };
-		A8E6831F1F07DC300077EC77 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherService.swift; path = Services/Weather/WeatherService.swift; sourceTree = "<group>"; };
-		A8E683211F07DC470077EC77 /* CityVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityVO.swift; path = Services/Weather/Data/CityVO.swift; sourceTree = "<group>"; };
-		A8E683221F07DC470077EC77 /* CoordVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoordVO.swift; path = Services/Weather/Data/CoordVO.swift; sourceTree = "<group>"; };
-		A8E683231F07DC470077EC77 /* MainVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainVO.swift; path = Services/Weather/Data/MainVO.swift; sourceTree = "<group>"; };
-		A8E683241F07DC470077EC77 /* WeatherResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherResponse.swift; path = Services/Weather/Data/WeatherResponse.swift; sourceTree = "<group>"; };
-		A8E683251F07DC470077EC77 /* WeatherVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherVO.swift; path = Services/Weather/Data/WeatherVO.swift; sourceTree = "<group>"; };
-		A8E683261F07DC470077EC77 /* WindVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WindVO.swift; path = Services/Weather/Data/WindVO.swift; sourceTree = "<group>"; };
 		A8E6835B1F07E8DB0077EC77 /* MarkerInfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MarkerInfoWindow.xib; path = ViewControllers/MapViewController/MarkerInfoWindow.xib; sourceTree = "<group>"; };
 		A8E6835D1F07E9D00077EC77 /* MarkerInfoWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarkerInfoWindow.swift; path = ViewControllers/MapViewController/MarkerInfoWindow.swift; sourceTree = "<group>"; };
 		A8E6835F1F08013D0077EC77 /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityListViewController.h; path = ViewControllers/CityListViewController/CityListViewController.h; sourceTree = "<group>"; };
@@ -101,6 +92,15 @@
 		A8E683611F08013D0077EC77 /* CityListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CityListViewController.xib; path = ViewControllers/CityListViewController/CityListViewController.xib; sourceTree = "<group>"; };
 		A8E683661F080C9C0077EC77 /* OWUserPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWUserPreferences.h; path = Common/OWUserPreferences.h; sourceTree = "<group>"; };
 		A8E683671F080C9C0077EC77 /* OWUserPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWUserPreferences.m; path = Common/OWUserPreferences.m; sourceTree = "<group>"; };
+		A8E683691F081A170077EC77 /* CityListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityListTableViewCell.h; path = ViewControllers/CityListViewController/CityListTableViewCell.h; sourceTree = "<group>"; };
+		A8E6836E1F081D940077EC77 /* OWBaseSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWBaseSessionManager.h; path = Common/OWBaseSessionManager.h; sourceTree = "<group>"; };
+		A8E6836F1F081D940077EC77 /* OWBaseSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWBaseSessionManager.m; path = Common/OWBaseSessionManager.m; sourceTree = "<group>"; };
+		A8E683711F083C340077EC77 /* RainVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RainVO.h; path = Services/Weather/Data/RainVO.h; sourceTree = "<group>"; };
+		A8E683721F083C340077EC77 /* RainVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RainVO.m; path = Services/Weather/Data/RainVO.m; sourceTree = "<group>"; };
+		A8E683771F0843E10077EC77 /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherDetailsViewController.swift; path = ViewControllers/WeatherDetailsViewController/WeatherDetailsViewController.swift; sourceTree = "<group>"; };
+		A8E683781F0843E10077EC77 /* WeatherDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeatherDetailsViewController.xib; path = ViewControllers/WeatherDetailsViewController/WeatherDetailsViewController.xib; sourceTree = "<group>"; };
+		A8E6838C1F090EE80077EC77 /* OpenWeatherMapTestsObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherMapTestsObjC.m; sourceTree = "<group>"; };
+		A8E6838E1F090F170077EC77 /* OpenWeatherMapTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenWeatherMapTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		AB4522A6F4B7719358F7A616 /* Pods-OpenWeatherMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherMapTests/Pods-OpenWeatherMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0B1B905CAF258DBD3C1ECF2 /* Pods-OpenWeatherMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWeatherMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenWeatherMapTests/Pods-OpenWeatherMapTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +176,9 @@
 			isa = PBXGroup;
 			children = (
 				A8268DD41F032F5B001CC571 /* OpenWeatherMapTests.swift */,
+				A8E6838C1F090EE80077EC77 /* OpenWeatherMapTestsObjC.m */,
 				A8268DD61F032F5B001CC571 /* Info.plist */,
+				A8E6838E1F090F170077EC77 /* OpenWeatherMapTests-Bridging-Header.h */,
 			);
 			path = OpenWeatherMapTests;
 			sourceTree = "<group>";
@@ -189,6 +191,8 @@
 				A8E682C51F0475F90077EC77 /* OWConstants.h */,
 				A8E683661F080C9C0077EC77 /* OWUserPreferences.h */,
 				A8E683671F080C9C0077EC77 /* OWUserPreferences.m */,
+				A8E6836E1F081D940077EC77 /* OWBaseSessionManager.h */,
+				A8E6836F1F081D940077EC77 /* OWBaseSessionManager.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -196,6 +200,7 @@
 		A8E682CD1F0525820077EC77 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A8E683741F08436B0077EC77 /* WeatherDetailsViewController */,
 				A8E683001F06CE170077EC77 /* CityListViewController */,
 				A8E682F51F06CA2B0077EC77 /* MapViewController */,
 			);
@@ -205,8 +210,7 @@
 		A8E682D21F06AB480077EC77 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A8E6831C1F07DC070077EC77 /* Swift */,
-				A8E6831B1F07DBF90077EC77 /* Obj-C */,
+				A8E682D71F06B2D60077EC77 /* Wheater */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -236,6 +240,8 @@
 				A8E683101F06D50E0077EC77 /* WindVO.m */,
 				A8E683121F06D5260077EC77 /* WeatherVO.h */,
 				A8E683131F06D5260077EC77 /* WeatherVO.m */,
+				A8E683711F083C340077EC77 /* RainVO.h */,
+				A8E683721F083C340077EC77 /* RainVO.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -256,46 +262,18 @@
 				A8E6835F1F08013D0077EC77 /* CityListViewController.h */,
 				A8E683601F08013D0077EC77 /* CityListViewController.m */,
 				A8E683611F08013D0077EC77 /* CityListViewController.xib */,
+				A8E683691F081A170077EC77 /* CityListTableViewCell.h */,
 			);
 			name = CityListViewController;
 			sourceTree = "<group>";
 		};
-		A8E6831B1F07DBF90077EC77 /* Obj-C */ = {
+		A8E683741F08436B0077EC77 /* WeatherDetailsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A8E682D71F06B2D60077EC77 /* Wheater */,
+				A8E683771F0843E10077EC77 /* WeatherDetailsViewController.swift */,
+				A8E683781F0843E10077EC77 /* WeatherDetailsViewController.xib */,
 			);
-			name = "Obj-C";
-			sourceTree = "<group>";
-		};
-		A8E6831C1F07DC070077EC77 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				A8E6831D1F07DC120077EC77 /* Weather */,
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		A8E6831D1F07DC120077EC77 /* Weather */ = {
-			isa = PBXGroup;
-			children = (
-				A8E6831E1F07DC1C0077EC77 /* Data */,
-				A8E6831F1F07DC300077EC77 /* WeatherService.swift */,
-			);
-			name = Weather;
-			sourceTree = "<group>";
-		};
-		A8E6831E1F07DC1C0077EC77 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				A8E683211F07DC470077EC77 /* CityVO.swift */,
-				A8E683221F07DC470077EC77 /* CoordVO.swift */,
-				A8E683231F07DC470077EC77 /* MainVO.swift */,
-				A8E683241F07DC470077EC77 /* WeatherResponse.swift */,
-				A8E683251F07DC470077EC77 /* WeatherVO.swift */,
-				A8E683261F07DC470077EC77 /* WindVO.swift */,
-			);
-			name = Data;
+			name = WeatherDetailsViewController;
 			sourceTree = "<group>";
 		};
 		B6824D2328A662E74AD9E559 /* Pods */ = {
@@ -372,6 +350,7 @@
 					A8268DCF1F032F5B001CC571 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = RZ263M6665;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A8268DB81F032F5B001CC571;
 					};
@@ -404,6 +383,7 @@
 			files = (
 				A8268DC71F032F5B001CC571 /* Assets.xcassets in Resources */,
 				A8E6835C1F07E8DB0077EC77 /* MarkerInfoWindow.xib in Resources */,
+				A8E6837A1F0843E10077EC77 /* WeatherDetailsViewController.xib in Resources */,
 				A8E682C81F0492760077EC77 /* InfoPlist.strings in Resources */,
 				A8E682B61F046AA00077EC77 /* Localizable.strings in Resources */,
 				A8E682B31F04689E0077EC77 /* Launch.xib in Resources */,
@@ -433,7 +413,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2C0A3BC1DC36C0FFE43A94E7 /* [CP] Copy Pods Resources */ = {
@@ -478,7 +458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D3C7F539CD9D6969255D6021 /* [CP] Embed Pods Frameworks */ = {
@@ -519,25 +499,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8E682C21F046C3A0077EC77 /* OWLocationManagerCentral.m in Sources */,
-				A8E683291F07DC470077EC77 /* MainVO.swift in Sources */,
-				A8E683271F07DC470077EC77 /* CityVO.swift in Sources */,
-				A8E683281F07DC470077EC77 /* CoordVO.swift in Sources */,
+				A8E683791F0843E10077EC77 /* WeatherDetailsViewController.swift in Sources */,
 				A8E6830B1F06D4D90077EC77 /* CoordVO.m in Sources */,
 				A8268DC51F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld in Sources */,
-				A8E6832C1F07DC470077EC77 /* WindVO.swift in Sources */,
 				A8E683621F08013D0077EC77 /* CityListViewController.m in Sources */,
 				A8E6831A1F07C5610077EC77 /* WeatherService.m in Sources */,
-				A8E683201F07DC300077EC77 /* WeatherService.swift in Sources */,
+				A8E683731F083C340077EC77 /* RainVO.m in Sources */,
 				A8E683681F080C9C0077EC77 /* OWUserPreferences.m in Sources */,
 				A8268DBD1F032F5B001CC571 /* AppDelegate.swift in Sources */,
 				A8E683141F06D5260077EC77 /* WeatherVO.m in Sources */,
-				A8E6832B1F07DC470077EC77 /* WeatherVO.swift in Sources */,
 				A8E683111F06D50E0077EC77 /* WindVO.m in Sources */,
+				A8E683701F081D940077EC77 /* OWBaseSessionManager.m in Sources */,
 				A8E683081F06D45D0077EC77 /* CityVO.m in Sources */,
 				A8E682D11F0528D90077EC77 /* MapViewController.swift in Sources */,
 				A8E6830E1F06D4F30077EC77 /* MainVO.m in Sources */,
 				A8E683051F06D2A40077EC77 /* WeatherResponse.m in Sources */,
-				A8E6832A1F07DC470077EC77 /* WeatherResponse.swift in Sources */,
 				A8E6835E1F07E9D10077EC77 /* MarkerInfoWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8268DD51F032F5B001CC571 /* OpenWeatherMapTests.swift in Sources */,
+				A8E6838D1F090EE80077EC77 /* OpenWeatherMapTestsObjC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,11 +697,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = RZ263M6665;
 				INFOPLIST_FILE = OpenWeatherMapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.diego.bezerra.OpenWeatherMapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherMapTests/OpenWeatherMapTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenWeatherMap.app/OpenWeatherMap";
 			};
@@ -736,11 +716,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = RZ263M6665;
 				INFOPLIST_FILE = OpenWeatherMapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.diego.bezerra.OpenWeatherMapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenWeatherMapTests/OpenWeatherMapTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenWeatherMap.app/OpenWeatherMap";
 			};

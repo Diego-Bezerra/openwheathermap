@@ -10,11 +10,11 @@
 #import <JSONModel/JSONModel.h>
 
 @interface MainVO : JSONModel
-    @property (nonatomic) double temp;
-    @property (nonatomic) double pressure;
-    @property (nonatomic) int humidity;
-    @property (nonatomic) double temp_min;
-    @property (nonatomic) double temp_max;
-    @property (nonatomic) double sea_level;
-    @property (nonatomic) double grnd_level;
+    @property (nonatomic) NSNumber<Optional>* temp;
+    @property (nonatomic) NSNumber<Optional>* pressure;
+    @property (nonatomic) NSNumber<Optional>* humidity;
+    @property (nonatomic) NSNumber<Optional>* temp_min;
+    @property (nonatomic) NSNumber<Optional>* temp_max;
+    @property (nonatomic) NSNumber<Optional>* sea_level;
+    @property (nonatomic) NSNumber<Optional>* grnd_level;
 @end

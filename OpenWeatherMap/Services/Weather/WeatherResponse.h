@@ -10,9 +10,11 @@
 #import <JSONModel/JSONModel.h>
 #import "CityVO.h"
 
+@protocol CityVO;
+
 @interface WeatherResponse : JSONModel
-    @property (nonatomic) NSString* message;
-    @property (nonatomic) NSNumber* cod;
-    @property (nonatomic) NSNumber* count;
-    @property (nonatomic) NSArray<CityVO *>* list;
+    @property (nonatomic) NSString<Optional>* message;
+    @property (nonatomic) NSNumber<Optional>* cod;
+    @property (nonatomic) NSNumber<Optional>* count;
+    @property (nonatomic) NSArray<Optional, CityVO>* list;
 @end

@@ -7,3 +7,5 @@
 #import "WeatherService.h"
 #import "CityListViewController.h"
 #import "OWUserPreferences.h"
+#import "CityVO.h"
+#import "WeatherVO.h"
