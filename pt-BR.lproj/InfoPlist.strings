@@ -5,4 +5,4 @@
   Created by Diego Bezerra Souza on 28/06/17.
   Copyright © 2017 Diego Bezerra Souza. All rights reserved.
 */
-"NSLocationWhenInUseUsageDescription" = "Open Weather Map quer sua localização para mostrar no mapa";
+"NSLocationWhenInUseUsageDescription" = "Open Weather Map quer sua localização para mostrar no mapa.";

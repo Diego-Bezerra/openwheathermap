@@ -12,6 +12,7 @@ import XCTest
 class OpenWeatherMapTests: XCTestCase {
     
     var baseSessionManager:OWBaseSessionManager!
+    let url = "http://api.openweathermap.org/data/2.5/find?lat=-8.058714&lon=-34.872348&cnt=15&units=metric&APPID=b7032a789ddf76625c8d9fe3efdf6129"
     
     override func setUp() {
         super.setUp()
@@ -42,8 +43,6 @@ class OpenWeatherMapTests: XCTestCase {
     
     func testValidCallToWeatherGetData() {
         
-        let url = "http://api.openweathermap.org/data/2.5/find?lat=-8.058714&lon=-34.872348&cnt=15&units=metric&APPID=b7032a789ddf76625c8d9fe3efdf6129"
-        
         let promise = expectation(description: "Request completed")
         var statusCode:Int?
         var responseError:Error?
@@ -62,7 +61,6 @@ class OpenWeatherMapTests: XCTestCase {
     }
     
     func testValidWeatherDataContent() {
-        let url = "http://api.openweathermap.org/data/2.5/find?lat=-8.058714&lon=-34.872348&cnt=15&APPID=b7032a789ddf76625c8d9fe3efdf6129"
         
         let promise = expectation(description: "Request completed")
         var jsonError:Error?

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		46864E8DC70F865C1A1274D1 /* Pods_OpenWeatherMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BD4F32136580DB345052F1 /* Pods_OpenWeatherMap.framework */; };
 		A8268DBD1F032F5B001CC571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8268DBC1F032F5B001CC571 /* AppDelegate.swift */; };
-		A8268DC51F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8268DC31F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld */; };
 		A8268DC71F032F5B001CC571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8268DC61F032F5B001CC571 /* Assets.xcassets */; };
 		A8268DD51F032F5B001CC571 /* OpenWeatherMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8268DD41F032F5B001CC571 /* OpenWeatherMapTests.swift */; };
 		A8E682B31F04689E0077EC77 /* Launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8E682B21F04689E0077EC77 /* Launch.xib */; };
@@ -54,7 +53,6 @@
 		93BD4F32136580DB345052F1 /* Pods_OpenWeatherMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenWeatherMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8268DB91F032F5B001CC571 /* OpenWeatherMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeatherMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8268DBC1F032F5B001CC571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8268DC41F032F5B001CC571 /* OpenWeatherMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenWeatherMap.xcdatamodel; sourceTree = "<group>"; };
 		A8268DC61F032F5B001CC571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8268DCB1F032F5B001CC571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8268DD01F032F5B001CC571 /* OpenWeatherMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +164,6 @@
 				A8268DBC1F032F5B001CC571 /* AppDelegate.swift */,
 				A8268DC61F032F5B001CC571 /* Assets.xcassets */,
 				A8268DCB1F032F5B001CC571 /* Info.plist */,
-				A8268DC31F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld */,
 				A8E682CA1F0492760077EC77 /* InfoPlist.strings */,
 				A8E682B81F046AA00077EC77 /* Localizable.strings */,
 			);
@@ -504,7 +501,6 @@
 				A8E682C21F046C3A0077EC77 /* OWLocationManagerCentral.m in Sources */,
 				A8E683791F0843E10077EC77 /* WeatherDetailsViewController.swift in Sources */,
 				A8E6830B1F06D4D90077EC77 /* CoordVO.m in Sources */,
-				A8268DC51F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld in Sources */,
 				A8E683981F09647B0077EC77 /* WeatherFacade.m in Sources */,
 				A8E683621F08013D0077EC77 /* CityListViewController.m in Sources */,
 				A8E6831A1F07C5610077EC77 /* WeatherService.m in Sources */,
@@ -761,19 +757,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A8268DC31F032F5B001CC571 /* OpenWeatherMap.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A8268DC41F032F5B001CC571 /* OpenWeatherMap.xcdatamodel */,
-			);
-			currentVersion = A8268DC41F032F5B001CC571 /* OpenWeatherMap.xcdatamodel */;
-			path = OpenWeatherMap.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A8268DB11F032F5B001CC571 /* Project object */;
 }
