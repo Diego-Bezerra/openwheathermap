@@ -7,7 +7,7 @@
 //
 
 #import "CityListViewController.h"
-#import "WeatherService.h"
+#import "WeatherFacade.h"
 #import "CityVO.h"
 #import "OpenWeatherMap-Swift.h"
 #import "MBProgressHUD.h"
@@ -46,6 +46,7 @@ static NSString* const cellIdent = @"cell";
     [super didReceiveMemoryWarning];
     
 }
+        
 
 -(void) showNoCitiesMessage:(BOOL) show {
     self.noCitiesLabel.hidden = !show;
@@ -54,9 +55,9 @@ static NSString* const cellIdent = @"cell";
     
 -(void) getWeatherData {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    WeatherService* ws = [[WeatherService alloc] init];
+    WeatherFacade* wf = [[WeatherFacade alloc] init];
     __weak CityListViewController* weakSelf = self;
-    [ws getWeatherDataWithLatitude:_latitude longitude:_longitude andCallback:^(WeatherResponse *weatherResponse, NSError *error) {
+    [wf getWeatherDataWithLatitude:_latitude longitude:_longitude andCallback:^(WeatherResponse *weatherResponse, NSError *error) {
         if (error || !weatherResponse || !weatherResponse.list || weatherResponse.list.count == 0) {
             [weakSelf showNoCitiesMessage:YES];
         } else {

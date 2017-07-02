@@ -24,6 +24,7 @@
         return [NSString stringWithFormat:@"%@%@", BASE_URL, url];
     }
     
+#pragma mark WeatherProtocolAPI
     -(void) getWeatherDataWithLatitude:(double) lat longitude:(double) lon andCallback:(void (^)(WeatherResponse* weatherResponse, NSError* error)) callback {
         
         NSString* urlStr = [self makeUrlWithString:[NSString stringWithFormat:GET_DATA, lat, lon, WEATHER_API_KEY]];

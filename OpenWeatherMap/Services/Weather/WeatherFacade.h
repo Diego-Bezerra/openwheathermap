@@ -1,16 +1,14 @@
 //
-//  WeatherService.h
+//  WeatherFacade.h
 //  OpenWeatherMap
 //
-//  Created by Diego Bezerra Souza on 01/07/17.
+//  Created by Diego Bezerra Souza on 02/07/17.
 //  Copyright © 2017 Diego Bezerra Souza. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "WeatherResponse.h"
-#import "OWBaseSessionManager.h"
-#import "WeatherProtocolAPI.h"
 
-@interface WeatherService: OWBaseSessionManager <WeatherProtocolAPI>
+@interface WeatherFacade : NSObject
     -(void) getWeatherDataWithLatitude:(double) lat longitude:(double) lon andCallback:(void (^)(WeatherResponse* weatherResponse, NSError* error)) callback;
 @end

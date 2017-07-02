@@ -61,30 +61,6 @@ class OpenWeatherMapTests: XCTestCase {
         XCTAssertEqual(statusCode, 200, "StatusCode is wrong")
     }
     
-    func testWeatherDataJsonParssing() {
-        
-        let url = "http://api.openweathermap.org/data/2.5/find?lat=-8.058714&lon=-34.872348&cnt=15&units=metric&APPID=b7032a789ddf76625c8d9fe3efdf6129"
-        
-        let promise = expectation(description: "Request completed")
-        var jsonError:Error?
-        var weatherData:WeatherResponse?
-        
-        baseSessionManager.getWithParameters(nil, url: url) { (task, response, error) in
-            do {
-                try weatherData = WeatherResponse(dictionary: response as! [AnyHashable : Any])
-            } catch {
-                jsonError = error
-            }
-            
-            promise.fulfill()
-        }
-        
-        waitForExpectations(timeout: 5, handler: nil)
-        
-        XCTAssertNil(jsonError, "Json data was not passed. JsonError: \(jsonError?.localizedDescription ?? "")")
-        XCTAssertNotNil(weatherData)
-    }
-    
     func testValidWeatherDataContent() {
         let url = "http://api.openweathermap.org/data/2.5/find?lat=-8.058714&lon=-34.872348&cnt=15&APPID=b7032a789ddf76625c8d9fe3efdf6129"
         

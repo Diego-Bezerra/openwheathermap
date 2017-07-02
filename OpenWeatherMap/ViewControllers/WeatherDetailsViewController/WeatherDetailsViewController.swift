@@ -32,7 +32,7 @@ class WeatherDetailsViewController: UIViewController {
         super.viewDidLoad()
         setupWeatherDetails()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

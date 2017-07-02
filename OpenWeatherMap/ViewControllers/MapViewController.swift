@@ -14,11 +14,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, UIAlertViewDelega
     var mapView:GMSMapView?
     var hasUserLocation = false
     var hasFirstMapTap = false
-    var marker = GMSMarker()
-    
-    deinit {
-        print("MapController")
-    }
+    var marker = GMSMarker()        
     
     override func viewDidLoad() {
         super.viewDidLoad()

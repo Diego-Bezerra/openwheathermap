@@ -7,7 +7,7 @@
 */
 //MapViewController
 "APP_NAME" = "Open Weather Map";
-"SEARCH_NEARBY_CITIES" = "Pesquise cidades próximas";
+"SEARCH_NEARBY_CITIES" = "Cidades próximas";
 "TUTORIAL" = "Tutorial";
 "TUTORIAL_MSG" = "Toque no mapa para criar um ponto";
 "DONT_SHOW_ANYMORE" = "Não me mostre mais!";

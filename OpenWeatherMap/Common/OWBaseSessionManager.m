@@ -10,9 +10,14 @@
 #import <AFNetworking/AFNetworking.h>
 
 @implementation OWBaseSessionManager
+    
+    NSTimeInterval const timeInterval = 10;
+    
+    #pragma mark OWBaseSessionManagerProtocol 
     -(void) getWithParameters:(NSDictionary*) parameters url:(NSString*) url andCallback:(void (^)(NSURLSessionTask *task, id responseObject, NSError* error)) callback {
         
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        manager.requestSerializer.timeoutInterval = timeInterval;
         [manager GET:url parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
             NSLog(@"JSON: %@", responseObject);
             callback(task, responseObject, nil);
@@ -21,4 +26,5 @@
             callback(operation, nil, error);
         }];
     }
+    
 @end
