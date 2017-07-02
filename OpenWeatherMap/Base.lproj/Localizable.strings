@@ -11,13 +11,14 @@
 "SEARCH_NEARBY_CITIES" = "Search Nearby Cities";
 "TUTORIAL" = "Tutorial";
 "TUTORIAL_MSG" = "Tap the map to create a point";
-"DONT_SHOW_ANYMORE" = "Don't show it anymore";
+"DONT_SHOW_ANYMORE" = "Don't show it anymore!";
+"OK" = "Ok";
 
 //CityListViewController
 "CITY_LIST_TITLE" = "Choose City";
 "COULD_NOT_SHOW_CITIES" = "Couldn't show nearby cities :(";
 
-
-"OK" = "Ok";
-
+//WeatherDetailsViewController
+"MAX_TEMP" = "Max.";
+"MIN_TEMP" = "Min.";
 

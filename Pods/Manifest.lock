@@ -20,17 +20,20 @@ PODS:
   - GoogleMaps/Maps (2.3.0):
     - GoogleMaps/Base
   - JSONModel (1.7.0)
+  - MBProgressHUD (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
   - GoogleMaps (= 2.3.0)
   - JSONModel (= 1.7.0)
+  - MBProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   GoogleMaps: 340a6a0bebd17c2db8abcd3921976c7c53c86cb8
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
 
-PODFILE CHECKSUM: 22d8afb80c515fdd44917c335c55be90de318f47
+PODFILE CHECKSUM: 94bac12314d27d7ad491db3474cde91783cbc55c
 
 COCOAPODS: 1.2.1

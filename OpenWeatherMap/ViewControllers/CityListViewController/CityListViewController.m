@@ -10,6 +10,7 @@
 #import "WeatherService.h"
 #import "CityVO.h"
 #import "OpenWeatherMap-Swift.h"
+#import "MBProgressHUD.h"
 
 @interface CityListViewController () <UITableViewDelegate, UITableViewDataSource>
     @property (weak, nonatomic) IBOutlet UITableView *cityTable;
@@ -52,15 +53,18 @@ static NSString* const cellIdent = @"cell";
 }
     
 -(void) getWeatherData {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     WeatherService* ws = [[WeatherService alloc] init];
     __weak CityListViewController* weakSelf = self;
     [ws getWeatherDataWithLatitude:_latitude longitude:_longitude andCallback:^(WeatherResponse *weatherResponse, NSError *error) {
-        if (error) {
+        if (error || !weatherResponse || !weatherResponse.list || weatherResponse.list.count == 0) {
             [weakSelf showNoCitiesMessage:YES];
         } else {
             weakSelf.cityList = weatherResponse.list;
             [weakSelf.cityTable reloadData];
+            [weakSelf showNoCitiesMessage:NO];
         }
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
     

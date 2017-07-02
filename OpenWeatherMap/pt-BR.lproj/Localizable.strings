@@ -7,14 +7,16 @@
 */
 //MapViewController
 "APP_NAME" = "Open Weather Map";
-"SEARCH_NEARBY_CITIES" = "Search Nearby Cities";
+"SEARCH_NEARBY_CITIES" = "Pesquise cidades próximas";
 "TUTORIAL" = "Tutorial";
-"TUTORIAL_MSG" = "Tap the map to create a point";
-"DONT_SHOW_ANYMORE" = "Don't show it anymore";
+"TUTORIAL_MSG" = "Toque no mapa para criar um ponto";
+"DONT_SHOW_ANYMORE" = "Não me mostre mais!";
+"OK" = "Ok";
 
 //CityListViewController
-"CITY_LIST_TITLE" = "Choose City";
-"COULD_NOT_SHOW_CITIES" = "Couldn't show nearby cities :(";
+"CITY_LIST_TITLE" = "Escolha a Cidade";
+"COULD_NOT_SHOW_CITIES" = "Não foi possível mostrar cidades próximas :(";
 
-
-"OK" = "Ok";
+//WeatherDetailsViewController
+"MAX_TEMP" = "Max.";
+"MIN_TEMP" = "Min.";

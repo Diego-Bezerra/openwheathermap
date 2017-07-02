@@ -9,6 +9,7 @@ target 'OpenWeatherMap' do
   pod 'GoogleMaps', '2.3.0'
   pod 'AFNetworking', '3.1.0'
   pod 'JSONModel', '1.7.0'
+  pod 'MBProgressHUD', '1.0.0'
 
   target 'OpenWeatherMapTests' do
     inherit! :search_paths

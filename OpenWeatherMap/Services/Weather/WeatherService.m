@@ -18,7 +18,7 @@
 @implementation WeatherService
     
     NSString* const BASE_URL = @"http://api.openweathermap.org/";
-    NSString* const GET_DATA = @"data/2.5/find?lat=%f&lon=%f&cnt=15&APPID=%@";
+    NSString* const GET_DATA = @"data/2.5/find?lat=%f&lon=%f&cnt=15&units=metric&APPID=%@";
     
     -(NSString*) makeUrlWithString:(NSString*) url {
         return [NSString stringWithFormat:@"%@%@", BASE_URL, url];
