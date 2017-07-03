@@ -12,21 +12,18 @@ import XCTest
 class OpenWeatherMapTests: XCTestCase {
     
     var baseSessionManager:OWBaseSessionManager!
-    var jsonReader:JsonReader!
     let url = "http://api.openweathermap.org/data/2.5/find?lat=-8.058714&lon=-34.872348&cnt=15&units=metric&APPID=b7032a789ddf76625c8d9fe3efdf6129"
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         baseSessionManager = OWBaseSessionManager()
-        jsonReader = ReaderFactory.getReader(JSON_READER) as! JsonReader!
         UserDefaults.standard.removeObject(forKey: "showtutorialkey")
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         baseSessionManager = nil
-        jsonReader = nil
         super.tearDown()
     }
     
@@ -75,7 +72,7 @@ class OpenWeatherMapTests: XCTestCase {
         
         baseSessionManager.getWithParameters(nil, url: url) { (task, response, error) in
             do {
-                weatherData = try self.jsonReader.readData(with: response as! [AnyHashable : Any], model: WeatherResponse.self) as? WeatherResponse
+                weatherData = try WeatherResponse.init(dictionary: response as! [AnyHashable : Any])
                 if let c = weatherData?.list.first as? CityVO {
                     city = c
                     max = c.main.temp_max.doubleValue

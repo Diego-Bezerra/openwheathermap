@@ -9,4 +9,3 @@
 #import "OWUserPreferences.h"
 #import "CityVO.h"
 #import "WeatherVO.h"
-#import "ReaderFactory.h"
